@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obelis AI | AI-Powered DevOps for Fast, Secure Cloud Deployments</title>
+    <title>Obelis | DevOps Made Easy - Deploy to AWS with Just a Few Clicks</title>
     
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://obelis.ai/">
-    <meta property="og:title" content="Obelis AI | AI-Powered DevOps for Fast, Secure Cloud Deployments">
-    <meta property="og:description" content="Deploy and monitor your infrastructure without requiring any DevOps knowledge. Let AI handle the complexity while you focus on building amazing products.">
+    <meta property="og:title" content="Obelis | DevOps Made Easy - Deploy to AWS with Just a Few Clicks">
+    <meta property="og:description" content="3-click deployment to your own AWS. Connect GitHub, add AWS credentials, deploy. No DevOps knowledge required. From code to production in under 5 minutes.">
     <meta property="og:image" content="https://obelis.ai.s3.amazonaws.com/og-image.png">
     <meta property="og:image:alt" content="Obelis AI - Your Intelligent Cloud Engineer">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Obelis AI | AI-Powered DevOps for Fast, Secure Cloud Deployments">
-    <meta name="twitter:description" content="Deploy, estimate, and monitor your infrastructure without requiring any DevOps knowledge. Let AI handle the complexity while you focus on building amazing products.">
+    <meta name="twitter:title" content="Obelis | DevOps Made Easy - Deploy to AWS with Just a Few Clicks">
+    <meta name="twitter:description" content="3-click deployment to your own AWS. Connect GitHub, add AWS credentials, deploy. No DevOps knowledge required. From code to production in under 5 minutes.">
     <meta name="twitter:image" content="https://obelis-landing.s3.amazonaws.com/og-image.png">
     <meta name="twitter:image:alt" content="Obelis AI - Your Intelligent Cloud Engineer">
     
     <!-- Additional Meta Tags -->
-    <meta name="description" content="Obelis AI empowers you to deploy, monitor, and optimize your cloud infrastructure with zero DevOps experience. Fast, secure, and fully automated by AI.">
-    <meta name="keywords" content="AI, DevOps, Cloud, Infrastructure, Automation, Deployment, Monitoring">
+    <meta name="description" content="Deploy to your AWS with just a few clicks. No DevOps knowledge required. 3-click deployment: Connect GitHub repo, add AWS credentials, deploy. From code to production in under 5 minutes.">
+    <meta name="keywords" content="AWS deployment, DevOps, GitHub, Cloud infrastructure, Startups, Solo developers, VPC, Auto-scaling, SSL certificates, PostgreSQL, MySQL, Node.js, Python, Go, React, Vue, Angular">
     <meta name="author" content="Obelis AI">
     
     <!-- Google Analytics -->
@@ -37,14 +37,14 @@
     <link rel="icon" type="image/png" href="./favicon.png">
     <meta name="theme-color" content="#0a0a0f">
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.0"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -150,12 +150,30 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Obelis AI",
+      "name": "Obelis",
       "url": "https://obelis.ai/",
       "logo": "https://obelis.ai.s3.amazonaws.com/og-image.png",
-      "description": "AI-powered DevOps platform for fast, secure cloud deployments.",
+      "description": "Deploy to your AWS with just a few clicks. No DevOps knowledge required. 3-click deployment: Connect GitHub repo, add AWS credentials, deploy.",
       "sameAs": [
         "https://discord.gg/VAeT5Q3hbc"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Federico"
+        },
+        {
+          "@type": "Person", 
+          "name": "Mateo"
+        },
+        {
+          "@type": "Person",
+          "name": "Segundo"
+        },
+        {
+          "@type": "Person",
+          "name": "Matias"
+        }
       ]
     }
     </script>
@@ -178,7 +196,7 @@
                         </defs>
                         <path style="fill:url(#logoGradient)" d="M 36.001782,5.1519269 31.123505,11.906071 28.121094,70.626332 H 44.256278 L 41.347746,11.624435 Z m -0.65715,3.0024104 0.187756,61.1593997 -6.003114,-0.09388 2.906826,-56.844393 z" />
                     </svg>
-                    Obelis AI
+Obelis
                 </div>
                 <!-- Mobile menu button -->
                 <button class="md:hidden text-white hover:text-primary transition-colors duration-300" id="mobile-menu-button">
@@ -217,13 +235,13 @@
         <div class="max-w-6xl mx-auto px-5">
             <div class="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-5 gradient-text glow-animation">
-                    AI-Powered DevOps
+                    DevOps Made Easy
                 </h1>
                 <p class="text-2xl md:text-3xl text-white/80 mb-4 font-light">
-                    Your Intelligent Cloud Engineer
+                    Deploy to your AWS with just a few clicks
                 </p>
                 <p class="text-lg md:text-xl text-white/70 mb-10 leading-relaxed">
-                    Deploy, estimate, and monitor your infrastructure without requiring any DevOps knowledge. Let AI handle the complexity while you focus on building amazing products.
+                    No DevOps knowledge required. Connect your GitHub repo, add AWS credentials, and deploy. We handle VPC setup, load balancers, SSL certificates, and monitoring automatically. <a href="#features" class="text-primary hover:text-secondary underline">Learn how it works</a>.
                 </p>
                 <a href="#waitlist" class="inline-block px-10 py-4 bg-gradient-to-r from-primary to-secondary text-dark rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 shine-effect">
                     Join Early Access
@@ -237,20 +255,20 @@
         <div class="max-w-6xl mx-auto px-5">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">90%</h3>
-                    <p class="text-white/80 text-lg">Faster Deployments</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">5 min</h3>
+                    <p class="text-white/80 text-lg">From Code to Production</p>
                 </div>
                 <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">Zero</h3>
-                    <p class="text-white/80 text-lg">DevOps Experience Required</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">3</h3>
+                    <p class="text-white/80 text-lg">Clicks to Deploy</p>
                 </div>
                 <div class="transform hover:scale-105 transition-transform duration-300">
                     <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">100%</h3>
                     <p class="text-white/80 text-lg">Your Infrastructure</p>
                 </div>
                 <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">24/7</h3>
-                    <p class="text-white/80 text-lg">AI Monitoring</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">150M+</h3>
+                    <p class="text-white/80 text-lg">Startups Need This</p>
                 </div>
             </div>
         </div>
@@ -260,65 +278,65 @@
     <section id="features" class="py-20 md:py-32 relative">
         <div class="max-w-6xl mx-auto px-5">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-5 gradient-text">
-                Why Choose Obelis AI?
+                How Obelis Works
             </h2>
             <p class="text-lg md:text-xl text-white/70 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-                Experience the future of infrastructure management with AI that understands your needs and scales with your business.
+                Skip the DevOps learning curve entirely. We bring Heroku-level simplicity to AWS-level control. <a href="#faq" class="text-primary hover:text-secondary underline">Have questions?</a>
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fab fa-github"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Intelligent Deployment</h3>
-                    <p class="text-white/80 leading-relaxed">AI builds and manages your deployments automatically, optimizing for performance, cost, and reliability without human intervention.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">🔗 Connect GitHub Repo</h3>
+                    <p class="text-white/80 leading-relaxed">Select your repository in one click. We support static websites (React, Vue, Angular) and Node.js, Python, Go applications.</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-key"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Complete Ownership</h3>
-                    <p class="text-white/80 leading-relaxed">Everything runs on your own infrastructure with zero shared runtimes. Maintain full control and security of your workloads.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">🔐 Add AWS Credentials</h3>
+                    <p class="text-white/80 leading-relaxed">Your infrastructure, your control. Deploy to YOUR AWS account with full cost transparency and no vendor lock-in.</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-plug"></i>
+                        <i class="fas fa-cog"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Seamless Integration</h3>
-                    <p class="text-white/80 leading-relaxed">Bring your existing CI/CD, observability, and infrastructure tools. Obelis AI works with what you already have.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">⚙️ Set Environment Variables</h3>
+                    <p class="text-white/80 leading-relaxed">Just the essentials - DB_URL, API_KEY, etc. We handle all the complex AWS configuration automatically.</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Smart Monitoring</h3>
-                    <p class="text-white/80 leading-relaxed">Real-time AI-powered monitoring that predicts issues before they happen and automatically resolves common problems.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">🚀 Deploy</h3>
+                    <p class="text-white/80 leading-relaxed">We configure VPC, security groups, load balancers, SSL certificates, database provisioning, and monitoring setup automatically.</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-coins"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Cost Optimization</h3>
-                    <p class="text-white/80 leading-relaxed">AI continuously analyzes your usage patterns and automatically optimizes resources to minimize costs without sacrificing performance.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Perfect for Solo Founders</h3>
+                    <p class="text-white/80 leading-relaxed">Built for indie developers and small teams (2-10 people) who need infrastructure but lack DevOps expertise.</p>
                 </div>
                 
                 <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
                     <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                     <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-bolt"></i>
+                        <i class="fas fa-database"></i>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Lightning Fast</h3>
-                    <p class="text-white/80 leading-relaxed">Deploy in minutes, not hours. Our AI understands your application patterns and creates optimized deployment strategies instantly.</p>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Database Support</h3>
+                    <p class="text-white/80 leading-relaxed">PostgreSQL and MySQL databases with automatic provisioning, backups, and monitoring setup included.</p>
                 </div>
             </div>
         </div>
@@ -333,31 +351,31 @@
             <div class="space-y-5">
                 <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
                     <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
-                        <span class="font-semibold text-lg">What is Obelis AI?</span>
+                        <span class="font-semibold text-lg">What is Obelis?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-white/80 pb-6 leading-relaxed">Obelis AI is an intelligent platform that revolutionizes DevOps by using AI to deploy, estimate, monitor, and optimize your cloud services—all running on your own infrastructure with complete ownership and control.</p>
+                        <p class="text-white/80 pb-6 leading-relaxed">Obelis is a 3-click deployment platform that lets you deploy to your own AWS account without any DevOps knowledge. Connect your GitHub repo, add AWS credentials, set environment variables, and deploy in under 5 minutes.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
                     <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
-                        <span class="font-semibold text-lg">Do you deploy to my infrastructure?</span>
+                        <span class="font-semibold text-lg">What happens to my AWS costs?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-white/80 pb-6 leading-relaxed">Absolutely. Everything runs on your own infrastructure—we never host your workloads. You maintain complete control, security, and compliance while benefiting from AI-powered automation.</p>
+                        <p class="text-white/80 pb-6 leading-relaxed">You pay AWS directly for your infrastructure usage. Since everything deploys to your AWS account, you get full cost transparency and no vendor markup. This gives you AWS-level control at a fraction of the cost of managed platforms.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
                     <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
-                        <span class="font-semibold text-lg">Can I bring my own tools?</span>
+                        <span class="font-semibold text-lg">What applications are supported?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-white/80 pb-6 leading-relaxed">Yes! We seamlessly integrate with your existing CI/CD pipelines, observability tools, and infrastructure providers. No need to replace your current stack—we enhance it with AI intelligence.</p>
+                        <p class="text-white/80 pb-6 leading-relaxed">We currently support static websites (React, Vue, Angular), Node.js, Python, and Go applications. We also handle PostgreSQL and MySQL databases with automatic provisioning and backups.</p>
                     </div>
                 </div>
                 
@@ -373,21 +391,21 @@
                 
                 <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
                     <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
-                        <span class="font-semibold text-lg">How does AI improve my deployments?</span>
+                        <span class="font-semibold text-lg">How is this different from Heroku or Vercel?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-white/80 pb-6 leading-relaxed">Our AI analyzes your application patterns, traffic, and resource usage to create optimal deployment strategies, predict and prevent issues, automatically scale resources, and continuously optimize for performance and cost.</p>
+                        <p class="text-white/80 pb-6 leading-relaxed">Unlike Heroku or Vercel, you deploy to YOUR AWS account, meaning no vendor lock-in, full cost transparency, and complete infrastructure control. You get the simplicity of managed platforms with the power and economics of AWS.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
                     <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
-                        <span class="font-semibold text-lg">Is my data secure?</span>
+                        <span class="font-semibold text-lg">Who is Obelis built for?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
-                        <p class="text-white/80 pb-6 leading-relaxed">Security is our top priority. Since everything runs on your infrastructure, your data never leaves your control. We use enterprise-grade encryption and follow industry best practices for secure AI operations.</p>
+                        <p class="text-white/80 pb-6 leading-relaxed">Obelis is perfect for solo founders, indie developers, and small teams (2-10 people) who need to deploy applications but don't want to spend weeks learning DevOps. If you can build the app but deploying feels impossible, Obelis is for you.</p>
                     </div>
                 </div>
             </div>
@@ -401,7 +419,7 @@
                 Join the future of DevOps
             </h2>
             <p class="text-lg md:text-xl text-white/70 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Be among the first to experience AI-powered DevOps. Get early access and exclusive updates on our launch.
+                Be among the first to experience 3-click deployment to AWS. Get early access and exclusive updates on our launch. Read our <a href="#faq" class="text-primary hover:text-secondary underline">FAQ</a> to learn more about <a href="#features" class="text-primary hover:text-secondary underline">how Obelis works</a>.
             </p>
             
             <div class="newsletter-form-container max-w-lg mx-auto">
@@ -426,7 +444,7 @@
     <!-- Footer -->
     <footer class="py-16 border-t border-primary/20 mt-20">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <p class="text-white/50 text-sm">© 2025 Obelis AI. All rights reserved. | Revolutionizing DevOps with AI</p>
+            <p class="text-white/50 text-sm">© 2025 Obelis. All rights reserved. | <a href="#features" class="text-primary/70 hover:text-primary underline">DevOps Made Easy</a> | <a href="#waitlist" class="text-primary/70 hover:text-primary underline">Join Waitlist</a></p>
         </div>
     </footer>
 
