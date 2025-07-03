@@ -7,11 +7,6 @@ on:
       - master
   workflow_dispatch: # Allows manual triggering
 
-env:
-  AWS_REGION: us-east-1 # Change to your region
-  S3_BUCKET: your-bucket-name # Change to your S3 bucket name
-  CLOUDFRONT_DISTRIBUTION_ID: E1234567890ABC # Change to your CloudFront distribution ID
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -29,8 +24,7 @@ jobs:
         
     - name: Sync files to S3
       run: |
-        aws s3 sync . s3://obelis-landing \
-          --delete \
+        aws s3 sync . s3://landing-obelis \
           --exclude ".git/*" \
           --exclude ".github/*" \
           --exclude "README.md" \
