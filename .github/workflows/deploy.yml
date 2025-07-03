@@ -34,18 +34,8 @@ jobs:
           --exclude ".git/*" \
           --exclude ".github/*" \
           --exclude "README.md" \
-          --exclude "*.md" \
-          --cache-control "public, max-age=31536000" \
-          --metadata-directive REPLACE
+          --exclude "*.md"
           
-    - name: Set cache control for HTML files
-      run: |
-        aws s3 cp s3://obelis-landing s3://obelis-landing \
-          --recursive \
-          --exclude "*" \
-          --include "*.html" \
-          --cache-control "public, max-age=0, must-revalidate" \
-          --metadata-directive REPLACE
           
     - name: Invalidate CloudFront distribution
       run: |
