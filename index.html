@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obelis | DevOps Made Easy - Deploy to AWS with Just a Few Clicks</title>
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://obelis.ai/">
+    <meta property="og:title" content="Obelis | DevOps Made Easy - Deploy to AWS with Just a Few Clicks">
+    <meta property="og:description" content="3-click deployment to your own AWS. Connect GitHub, add AWS credentials, deploy. No DevOps knowledge required. From code to production in under 5 minutes.">
+    <meta property="og:image" content="https://obelis.ai.s3.amazonaws.com/og-image.png">
+    <meta property="og:image:alt" content="Obelis AI - Your Intelligent Cloud Engineer">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Obelis | DevOps Made Easy - Deploy to AWS with Just a Few Clicks">
+    <meta name="twitter:description" content="3-click deployment to your own AWS. Connect GitHub, add AWS credentials, deploy. No DevOps knowledge required. From code to production in under 5 minutes.">
+    <meta name="twitter:image" content="https://obelis-landing.s3.amazonaws.com/og-image.png">
+    <meta name="twitter:image:alt" content="Obelis AI - Your Intelligent Cloud Engineer">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="Deploy to your AWS with just a few clicks. No DevOps knowledge required. 3-click deployment: Connect GitHub repo, add AWS credentials, deploy. From code to production in under 5 minutes.">
+    <meta name="keywords" content="AWS deployment, DevOps, GitHub, Cloud infrastructure, Startups, Solo developers, VPC, Auto-scaling, SSL certificates, PostgreSQL, MySQL, Node.js, Python, Go, React, Vue, Angular">
+    <meta name="author" content="Obelis AI">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7CJYH4LPJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-R7CJYH4LPJ');
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <meta name="theme-color" content="#0a0a0f">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.0"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#64ffda',
+                        'secondary': '#00bcd4',
+                        'dark': '#0a0a0f',
+                        'darker': '#1a1a2e',
+                        'accent': '#16213e'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            background-color: #0a0a0f;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #64ffda, #00bcd4, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow-animation {
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.3)); }
+            to { filter: drop-shadow(0 0 40px rgba(100, 255, 218, 0.6)); }
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #64ffda;
+            border-radius: 50%;
+            opacity: 0;
+            animation: float 15s infinite linear;
+            pointer-events: none;
+            will-change: transform;
+            bottom: -10px;
+        }
+        
+        @keyframes float {
+            0% { 
+                transform: translateY(0) rotate(0deg); 
+                opacity: 0; 
+            }
+            5% { 
+                opacity: 0.4; 
+            }
+            95% { 
+                opacity: 0.4; 
+            }
+            100% { 
+                transform: translateY(-100vh) rotate(360deg); 
+                opacity: 0; 
+            }
+        }
+        
+        .pulse-icon {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .shine-effect:hover::before {
+            left: 100%;
+        }
+    </style>
+    <link rel="canonical" href="https://obelis.ai/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Obelis",
+      "url": "https://obelis.ai/",
+      "logo": "https://obelis.ai.s3.amazonaws.com/og-image.png",
+      "description": "Deploy to your AWS with just a few clicks. No DevOps knowledge required. 3-click deployment: Connect GitHub repo, add AWS credentials, deploy.",
+      "sameAs": [
+        "https://discord.gg/VAeT5Q3hbc"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Federico"
+        },
+        {
+          "@type": "Person", 
+          "name": "Mateo"
+        },
+        {
+          "@type": "Person",
+          "name": "Segundo"
+        },
+        {
+          "@type": "Person",
+          "name": "Matias"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-dark via-darker to-accent text-white font-sans overflow-x-hidden">
+    <!-- Floating Particles -->
+    <div id="particles" class="fixed inset-0 z-10 pointer-events-none overflow-hidden"></div>
+
+    <!-- Header -->
+    <header class="relative z-50 py-5">
+        <div class="max-w-6xl mx-auto px-5">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center gap-3 text-2xl font-bold gradient-text">
+                    <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient">
+                                <stop style="stop-color:#00bcd4;stop-opacity:1;" offset="0" />
+                                <stop style="stop-color:#64ffda;stop-opacity:1;" offset="1" />
+                            </linearGradient>
+                        </defs>
+                        <path style="fill:url(#logoGradient)" d="M 36.001782,5.1519269 31.123505,11.906071 28.121094,70.626332 H 44.256278 L 41.347746,11.624435 Z m -0.65715,3.0024104 0.187756,61.1593997 -6.003114,-0.09388 2.906826,-56.844393 z" />
+                    </svg>
+Obelis
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden text-white hover:text-primary transition-colors duration-300" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <!-- Desktop navigation -->
+                <ul class="hidden md:flex items-center gap-8">
+                    <li><a href="#features" class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Features</a></li>
+                    <li><a href="#faq" class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">FAQ</a></li>
+                    <li><a href="#waitlist" class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Waitlist</a></li>
+                    <li><a href="https://discord.gg/VAeT5Q3hbc" target="_blank" class="group inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#5865F2]/50 relative overflow-hidden">
+                        <i class="fab fa-discord text-lg transition-transform duration-300 group-hover:scale-110"></i>
+                        <span class="relative z-10">Join Community</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </a></li>
+                </ul>
+            </nav>
+            <!-- Mobile navigation menu -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <ul class="py-4 space-y-4">
+                    <li><a href="#features" class="block text-white/80 hover:text-primary transition-colors duration-300">Features</a></li>
+                    <li><a href="#faq" class="block text-white/80 hover:text-primary transition-colors duration-300">FAQ</a></li>
+                    <li><a href="#waitlist" class="block text-white/80 hover:text-primary transition-colors duration-300">Waitlist</a></li>
+                    <li><a href="https://discord.gg/VAeT5Q3hbc" target="_blank" class="block group inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#5865F2]/50 relative overflow-hidden">
+                        <i class="fab fa-discord text-lg transition-transform duration-300 group-hover:scale-110"></i>
+                        <span class="relative z-10">Join Community</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-5 gradient-text glow-animation">
+                    DevOps Made Easy
+                </h1>
+                <p class="text-2xl md:text-3xl text-white/80 mb-4 font-light">
+                    Deploy to your AWS with just a few clicks
+                </p>
+                <p class="text-lg md:text-xl text-white/70 mb-10 leading-relaxed">
+                    No DevOps knowledge required. Connect your GitHub repo, add AWS credentials, and deploy. We handle VPC setup, load balancers, SSL certificates, and monitoring automatically. <a href="#features" class="text-primary hover:text-secondary underline">Learn how it works</a>.
+                </p>
+                <a href="#waitlist" class="inline-block px-10 py-4 bg-gradient-to-r from-primary to-secondary text-dark rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 shine-effect">
+                    Join Early Access
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-white/5 my-20">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">5 min</h3>
+                    <p class="text-white/80 text-lg">From Code to Production</p>
+                </div>
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">3</h3>
+                    <p class="text-white/80 text-lg">Clicks to Deploy</p>
+                </div>
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">100%</h3>
+                    <p class="text-white/80 text-lg">Your Infrastructure</p>
+                </div>
+                <div class="transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">150M+</h3>
+                    <p class="text-white/80 text-lg">Startups Need This</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 md:py-32 relative">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-5 gradient-text">
+                How Obelis Works
+            </h2>
+            <p class="text-lg md:text-xl text-white/70 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+                Skip the DevOps learning curve entirely. We bring Heroku-level simplicity to AWS-level control. <a href="#faq" class="text-primary hover:text-secondary underline">Have questions?</a>
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">🔗 Connect GitHub Repo</h3>
+                    <p class="text-white/80 leading-relaxed">Select your repository in one click. We support static websites (React, Vue, Angular) and Node.js, Python, Go applications.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">🔐 Add AWS Credentials</h3>
+                    <p class="text-white/80 leading-relaxed">Your infrastructure, your control. Deploy to YOUR AWS account with full cost transparency and no vendor lock-in.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">⚙️ Set Environment Variables</h3>
+                    <p class="text-white/80 leading-relaxed">Just the essentials - DB_URL, API_KEY, etc. We handle all the complex AWS configuration automatically.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">🚀 Deploy</h3>
+                    <p class="text-white/80 leading-relaxed">We configure VPC, security groups, load balancers, SSL certificates, database provisioning, and monitoring setup automatically.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Perfect for Solo Founders</h3>
+                    <p class="text-white/80 leading-relaxed">Built for indie developers and small teams (2-10 people) who need infrastructure but lack DevOps expertise.</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Database Support</h3>
+                    <p class="text-white/80 leading-relaxed">PostgreSQL and MySQL databases with automatic provisioning, backups, and monitoring setup included.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-5">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">
+                Frequently Asked Questions
+            </h2>
+            <div class="space-y-5">
+                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                        <span class="font-semibold text-lg">What is Obelis?</span>
+                        <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-white/80 pb-6 leading-relaxed">Obelis is a 3-click deployment platform that lets you deploy to your own AWS account without any DevOps knowledge. Connect your GitHub repo, add AWS credentials, set environment variables, and deploy in under 5 minutes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                        <span class="font-semibold text-lg">What happens to my AWS costs?</span>
+                        <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-white/80 pb-6 leading-relaxed">You pay AWS directly for your infrastructure usage. Since everything deploys to your AWS account, you get full cost transparency and no vendor markup. This gives you AWS-level control at a fraction of the cost of managed platforms.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                        <span class="font-semibold text-lg">What applications are supported?</span>
+                        <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-white/80 pb-6 leading-relaxed">We currently support static websites (React, Vue, Angular), Node.js, Python, and Go applications. We also handle PostgreSQL and MySQL databases with automatic provisioning and backups.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                        <span class="font-semibold text-lg">Do I need DevOps experience?</span>
+                        <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-white/80 pb-6 leading-relaxed">Not at all. Obelis AI handles all the complex DevOps heavy lifting—deployment orchestration, infrastructure provisioning, monitoring setup, and optimization. You focus on building great products, we handle the infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                        <span class="font-semibold text-lg">How is this different from Heroku or Vercel?</span>
+                        <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-white/80 pb-6 leading-relaxed">Unlike Heroku or Vercel, you deploy to YOUR AWS account, meaning no vendor lock-in, full cost transparency, and complete infrastructure control. You get the simplicity of managed platforms with the power and economics of AWS.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                        <span class="font-semibold text-lg">Who is Obelis built for?</span>
+                        <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-6">
+                        <p class="text-white/80 pb-6 leading-relaxed">Obelis is perfect for solo founders, indie developers, and small teams (2-10 people) who need to deploy applications but don't want to spend weeks learning DevOps. If you can build the app but deploying feels impossible, Obelis is for you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-20 md:py-32 bg-primary/5">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-5 gradient-text">
+                Join the future of DevOps
+            </h2>
+            <p class="text-lg md:text-xl text-white/70 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Be among the first to experience 3-click deployment to AWS. Get early access and exclusive updates on our launch. Read our <a href="#faq" class="text-primary hover:text-secondary underline">FAQ</a> to learn more about <a href="#features" class="text-primary hover:text-secondary underline">how Obelis works</a>.
+            </p>
+            
+            <div class="newsletter-form-container max-w-lg mx-auto">
+                <form class="newsletter-form" action="https://app.loops.so/api/newsletter-form/cmag4ikmt040rro6i5exx0hp5" method="POST" style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;">
+                    <input class="newsletter-form-input" name="newsletter-form-input" type="email" placeholder="you@example.com" required="" style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 10px 0px 0px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
+                    <button type="submit" class="newsletter-form-button" style="background: rgb(133, 255, 227); font-size: 14px; color: rgb(0, 0, 0); font-family: Inter, sans-serif; display: flex; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Join Waitlist</button>
+                    <button type="button" class="newsletter-loading-button" style="background: rgb(133, 255, 227); font-size: 14px; color: rgb(0, 0, 0); font-family: Inter, sans-serif; display: none; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Please wait...</button>
+                </form>
+                <div class="newsletter-success" style="display: none; align-items: center; justify-content: center; width: 100%;">
+                    <p class="newsletter-success-message" style="font-family: Inter, sans-serif; color: rgb(255, 255, 255); font-size: 14px;">Thanks for joining!</p>
+                </div>
+                <div class="newsletter-error" style="display: none; align-items: center; justify-content: center; width: 100%;">
+                    <p class="newsletter-error-message" style="font-family: Inter, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">Oops! Something went wrong, please try again</p>
+                </div>
+                <button class='newsletter-back-button' type='button' style='color:#6b7280;font: 14px, Inter, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer' onmouseout='this.style.textDecoration="none"' onmouseover='this.style.textDecoration="underline"'>
+                    &larr; Back
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-primary/20 mt-20">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <p class="text-white/50 text-sm">© 2025 Obelis. All rights reserved. | <a href="#features" class="text-primary/70 hover:text-primary underline">DevOps Made Easy</a> | <a href="#waitlist" class="text-primary/70 hover:text-primary underline">Join Waitlist</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            if (!particles) return;
+            
+            particles.innerHTML = '';
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = (Math.random() * -15) + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particles.appendChild(particle);
+            }
+        }
+
+        // Initialize particles
+        createParticles();
+        window.addEventListener('resize', createParticles);
+
+        // FAQ accordion
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const wasActive = faqItem.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = '0';
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!wasActive) {
+                        faqItem.classList.add('active');
+                        const answer = faqItem.querySelector('.faq-answer');
+                        answer.style.maxHeight = (answer.scrollHeight + 20) + 'px';
+                    }
+                });
+            });
+        });
+
+        // Initialize waitlist form
+        function submitHandler(event) {
+            event.preventDefault();
+            var container = event.target.parentNode;
+            var form = container.querySelector(".newsletter-form");
+            var formInput = container.querySelector(".newsletter-form-input");
+            var success = container.querySelector(".newsletter-success");
+            var errorContainer = container.querySelector(".newsletter-error");
+            var errorMessage = container.querySelector(".newsletter-error-message");
+            var backButton = container.querySelector(".newsletter-back-button");
+            var submitButton = container.querySelector(".newsletter-form-button");
+            var loadingButton = container.querySelector(".newsletter-loading-button");
+
+            const rateLimit = () => {
+                errorContainer.style.display = "flex";
+                errorMessage.innerText = "Too many signups, please try again in a little while";
+                submitButton.style.display = "none";
+                formInput.style.display = "none";
+                backButton.style.display = "block";
+            }
+
+            // Compare current time with time of previous sign up
+            var time = new Date();
+            var timestamp = time.valueOf();
+            var previousTimestamp = localStorage.getItem("loops-form-timestamp");
+
+            // If last sign up was less than a minute ago
+            // display error
+            if (previousTimestamp && Number(previousTimestamp) + 60000 > timestamp) {
+                rateLimit();
+                return;
+            }
+            localStorage.setItem("loops-form-timestamp", timestamp);
+
+            submitButton.style.display = "none";
+            loadingButton.style.display = "flex";
+
+            var formBody = "userGroup=&mailingLists=&email=" + encodeURIComponent(formInput.value);
+
+            fetch(event.target.action, {
+                method: "POST",
+                body: formBody,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            })
+                .then((res) => [res.ok, res.json(), res])
+                .then(([ok, dataPromise, res]) => {
+                    if (ok) {
+                        // If response successful
+                        // display success
+                        success.style.display = "flex";
+                        form.reset();
+                    } else {
+                        // If response unsuccessful
+                        // display error message or response status
+                        dataPromise.then(data => {
+                            errorContainer.style.display = "flex";
+                            errorMessage.innerText = data.message ? data.message : res.statusText;
+                        });
+                    }
+                })
+                .catch(error => {
+                    // check for cloudflare error
+                    if (error.message === "Failed to fetch") {
+                        rateLimit();
+                        return;
+                    }
+                    // If error caught
+                    // display error message if available
+                    errorContainer.style.display = "flex";
+                    if (error.message) errorMessage.innerText = error.message;
+                    localStorage.setItem("loops-form-timestamp", '');
+                })
+                .finally(() => {
+                    formInput.style.display = "none";
+                    loadingButton.style.display = "none";
+                    backButton.style.display = "block";
+                });
+        }
+
+        function resetFormHandler(event) {
+            var container = event.target.parentNode;
+            var formInput = container.querySelector(".newsletter-form-input");
+            var success = container.querySelector(".newsletter-success");
+            var errorContainer = container.querySelector(".newsletter-error");
+            var errorMessage = container.querySelector(".newsletter-error-message");
+            var backButton = container.querySelector(".newsletter-back-button");
+            var submitButton = container.querySelector(".newsletter-form-button");
+
+            success.style.display = "none";
+            errorContainer.style.display = "none";
+            errorMessage.innerText = "Oops! Something went wrong, please try again";
+            backButton.style.display = "none";
+            formInput.style.display = "flex";
+            submitButton.style.display = "flex";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            var formContainers = document.getElementsByClassName("newsletter-form-container");
+
+            for (var i = 0; i < formContainers.length; i++) {
+                var formContainer = formContainers[i];
+                var handlersAdded = formContainer.classList.contains('newsletter-handlers-added');
+                if (handlersAdded) continue;
+                formContainer.querySelector(".newsletter-form").addEventListener("submit", submitHandler);
+                formContainer.querySelector(".newsletter-back-button").addEventListener("click", resetFormHandler);
+                formContainer.classList.add("newsletter-handlers-added");
+            }
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Smooth
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Toggle between menu and close icons
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
