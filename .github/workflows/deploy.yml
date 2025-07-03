@@ -29,22 +29,12 @@ jobs:
         
     - name: Sync files to S3
       run: |
-        # Sync all files first without cache control
         aws s3 sync . s3://obelis-landing \
           --delete \
           --exclude ".git/*" \
           --exclude ".github/*" \
           --exclude "README.md" \
-          --exclude "*.md"
-        
-          # Set specific headers for HTML files
-          aws s3 cp s3://obelis-landing/ s3://obelis-landing/ \
-            --recursive \
-            --exclude "*" \
-            --include "*.html" \
-            --content-type "text/html" \
-            --cache-control "public, max-age=31536000" \
-            --metadata-directive REPLACE
+          --exclude "*.md
           
           
     - name: Invalidate CloudFront distribution
