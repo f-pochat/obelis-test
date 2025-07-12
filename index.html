@@ -532,7 +532,12 @@ Obelis AI
             submitButton.style.display = "none";
             loadingButton.style.display = "flex";
 
-            var formBody = "userGroup=&mailingLists=&email=" + encodeURIComponent(formInput.value);
+            // Check for ref=betalist in URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const refParam = urlParams.get('ref');
+            const userGroup = refParam === 'betalist' ? 'betalist' : '';
+            
+            var formBody = "userGroup=" + encodeURIComponent(userGroup) + "&mailingLists=&email=" + encodeURIComponent(formInput.value);
 
             fetch(event.target.action, {
                 method: "POST",
