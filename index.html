@@ -50,28 +50,28 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#64ffda',
-                        'secondary': '#00bcd4',
+                        'primary': '#3b82f6',
+                        'secondary': '#8b5cf6',
                         'dark': '#0a0a0f',
                         'darker': '#1a1a2e',
                         'accent': '#16213e'
                     },
                     fontFamily: {
-                        'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+                        'sans': ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
         
         body {
             background-color: #0a0a0f;
         }
 
         .gradient-text {
-            background: linear-gradient(45deg, #64ffda, #00bcd4, #ffffff);
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -82,15 +82,15 @@
         }
         
         @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.3)); }
-            to { filter: drop-shadow(0 0 40px rgba(100, 255, 218, 0.6)); }
+            from { filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3)); }
+            to { filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.6)); }
         }
         
         .particle {
             position: absolute;
             width: 3px;
             height: 3px;
-            background: #64ffda;
+            background: #3b82f6;
             border-radius: 50%;
             opacity: 0;
             animation: float 15s infinite linear;
@@ -186,17 +186,11 @@
     <header class="relative z-50 py-5">
         <div class="max-w-6xl mx-auto px-5">
             <nav class="flex justify-between items-center">
-                <div class="flex items-center gap-3 text-2xl font-bold gradient-text">
+                <div class="flex items-center gap-3 text-2xl font-bold">
                     <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="logoGradient">
-                                <stop style="stop-color:#00bcd4;stop-opacity:1;" offset="0" />
-                                <stop style="stop-color:#64ffda;stop-opacity:1;" offset="1" />
-                            </linearGradient>
-                        </defs>
-                        <path style="fill:url(#logoGradient)" d="M 36.001782,5.1519269 31.123505,11.906071 28.121094,70.626332 H 44.256278 L 41.347746,11.624435 Z m -0.65715,3.0024104 0.187756,61.1593997 -6.003114,-0.09388 2.906826,-56.844393 z" />
+                        <path style="fill:#ffffff" d="M 36.001782,5.1519269 31.123505,11.906071 28.121094,70.626332 H 44.256278 L 41.347746,11.624435 Z m -0.65715,3.0024104 0.187756,61.1593997 -6.003114,-0.09388 2.906826,-56.844393 z" />
                     </svg>
-Obelis AI
+                Obelis AI
                 </div>
                 <!-- Mobile menu button -->
                 <button class="md:hidden text-white hover:text-primary transition-colors duration-300" id="mobile-menu-button">
@@ -233,22 +227,34 @@ Obelis AI
     <!-- Hero Section -->
     <section class="relative py-20 md:py-32">
         <div class="max-w-6xl mx-auto px-5">
-            <div class="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-5 gradient-text glow-animation">
-                    AI-Powered DevOps
+            <div class="flex flex-col items-center justify-center text-center  mx-auto">
+                <h1 class="text-[70px] md:text5xl text-white/80 mb-4 font-light leading-[1.2] max-w-5xl">
+                    Manage your infrastructure with your <span class="text-primary">AI DevOps Engineer</span>
                 </h1>
-                <p class="text-2xl md:text-3xl text-white/80 mb-4 font-light">
-                    Deploy to your AWS with AI intelligence
-                </p>
-                <p class="text-lg md:text-xl text-white/70 mb-4 leading-relaxed">
+                <p class="text-lg md:text-xl text-white/70 mb-4 leading-relaxed max-w-xl">
                     No DevOps knowledge required. Connect your GitHub repo, add AWS credentials, and let AI handle the rest.
                 </p>
-                <p class="text-lg md:text-xl text-primary font-medium mb-4">
-                    ✨ Now with MCP Server for AI-powered deployments
-                </p>
-                <a href="#waitlist" class="inline-block px-10 py-4 bg-gradient-to-r from-primary to-secondary text-dark rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 shine-effect">
-                    Apply for Beta
+                <a href="#waitlist" class="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
+                    <i class="fas fa-rocket text-sm"></i>
+                    Apply for Beta Access
                 </a>
+                <div class="mcp-banner bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 border border-blue-500/30 rounded-2xl p-4 mb-6 mt-10 relative overflow-hidden group hover:border-blue-500/50 transition-all duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-pulse"></div>
+                    <div class="relative z-10 flex items-center justify-center gap-3">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                            <div class="w-1 h-1 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                        </div>
+                        <span class="text-lg md:text-xl text-blue-500 font-semibold">✨ Now with MCP Server for AI-powered deployments</span>
+                        <div class="flex items-center gap-2">
+                            <div class="w-1 h-1 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                            <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 2.5s;"></div>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -256,30 +262,51 @@ Obelis AI
     <!-- Stats Section -->
     <section class="py-20 bg-white/5 my-20">
         <div class="max-w-6xl mx-auto px-5">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-                <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">5 min</h3>
-                    <p class="text-white/80 text-lg">From Code to Production</p>
-                </div>
-                <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">3</h3>
-                    <p class="text-white/80 text-lg">Clicks to Deploy</p>
-                </div>
-                <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">100%</h3>
-                    <p class="text-white/80 text-lg">Your Infrastructure</p>
-                </div>
-                <div class="transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-4xl md:text-5xl font-bold text-primary mb-2">AI</h3>
-                    <p class="text-white/80 text-lg">Powered Intelligence</p>
-                </div>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-5 gradient-text">
+                    See Obelis AI in Action
+                </h2>
+                <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+                    Watch how AI transforms your deployment process from complex DevOps to simple clicks
+                </p>
             </div>
             
-            <!-- Startup Fame Badge -->
-            <div class="text-center mt-12">
-                <a href="https://startupfa.me/s/obelis-ai?utm_source=obelis.ai" target="_blank" class="inline-block transform hover:scale-105 transition-transform duration-300">
-                    <img src="https://startupfa.me/badges/featured/dark.webp" alt="Featured on Startup Fame" width="171" height="54" />
-                </a>
+            <div class="relative group">
+                <!-- Glowing border effect -->
+                <!-- <div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div> -->
+                
+                <!-- Video container -->
+                <div class="relative rounded-3xl p-8 md:p-12 overflow-hidden">
+                    
+                    <!-- Video wrapper with aspect ratio -->
+                    <div class="relative z-10">
+                        <div class="relative w-full" style="padding-bottom: 56.25%;">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-xl shadow-primary/20"
+                                src="https://www.youtube.com/embed/w3PhYc2oW8Q?rel=0&modestbranding=1&showinfo=0"
+                                title="Obelis AI - AI-Powered DevOps Demo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    
+                    </div>
+                    
+                    <!-- Floating elements -->
+                    <div class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                    <div class="absolute bottom-4 left-4 w-2 h-2 bg-secondary rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    <div class="absolute top-1/2 right-6 w-1 h-1 bg-primary rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                </div>
+                
+                <!-- Call to action below video -->
+                <div class="text-center mt-8">
+                    <p class="text-white/70 text-lg mb-4">Ready to experience AI-powered deployment?</p>
+                    <a href="#waitlist" class="inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
+                        <i class="fas fa-rocket text-sm"></i>
+                        Apply for Beta Access
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -287,66 +314,99 @@ Obelis AI
     <!-- Features Section -->
     <section id="features" class="py-20 md:py-32 relative">
         <div class="max-w-6xl mx-auto px-5">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-5 gradient-text">
-                How Obelis AI Works
-            </h2>
-            <p class="text-lg md:text-xl text-white/70 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-                Skip the DevOps learning curve entirely. We bring AI-powered intelligence to AWS deployment. <a href="#faq" class="text-primary hover:text-secondary underline">Have questions?</a>
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fab fa-github"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- AI Managed Project -->
+                <div class="feature-card bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 backdrop-blur-xl border border-blue-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/20 group relative overflow-hidden">
+                    <!-- Animated background particles -->
+                    <div class="absolute inset-0 opacity-20">
+                        <div class="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-blue-300 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Connect GitHub Repo</h3>
-                    <p class="text-white/80 leading-relaxed">Select your repository in one click. AI analyzes your codebase to determine the optimal deployment strategy.</p>
+                    
+                    <!-- Glowing border effect -->
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                    
+                    <!-- Icon with enhanced animation -->
+                    <div class="relative z-10">
+                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <i class="fas fa-cloud text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <!-- Floating elements around icon -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-60"></div>
+                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-blue-300 rounded-full animate-bounce opacity-60" style="animation-delay: 1s;"></div>
+                    </div>
+                    
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300" style="line-height: 1.2; padding-bottom: 4px;">AI Managed Project</h3>
+                    <p class="text-white/80 leading-relaxed text-lg">Your AI DevOps engineer manages everything on AWS. From infrastructure to monitoring, AI handles it all while you focus on building.</p>
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-key"></i>
+                <!-- GitHub to Production -->
+                <div class="feature-card bg-gradient-to-br from-green-500/10 via-blue-500/10 to-green-500/10 backdrop-blur-xl border border-green-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-green-500/60 hover:shadow-2xl hover:shadow-green-500/20 group relative overflow-hidden">
+                    <!-- Animated background particles -->
+                    <div class="absolute inset-0 opacity-20">
+                        <div class="absolute top-4 left-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-green-300 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Add AWS Credentials</h3>
-                    <p class="text-white/80 leading-relaxed">Your infrastructure, your control. Deploy to YOUR AWS account with full cost transparency and no vendor lock-in.</p>
+                    
+                    <!-- Glowing border effect -->
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-500/20 via-blue-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                    
+                    <!-- Icon with enhanced animation -->
+                    <div class="relative z-10">
+                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-green-500/30 group-hover:shadow-green-500/50 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                            <i class="fab fa-github text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-green-400 rounded-full animate-bounce opacity-60"></div>
+                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-green-300 rounded-full animate-bounce opacity-60" style="animation-delay: 1s;"></div>
+                    </div>
+                    
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">GitHub to Production</h3>
+                    <p class="text-white/80 leading-relaxed text-lg">From your GitHub repo to production in seconds. AI automatically detects your stack and deploys with optimal configurations.</p>
                 </div>
                 
-                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-brain"></i>
+                <!-- Serverless DB -->
+                <div class="feature-card bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-purple-500/60 hover:shadow-2xl hover:shadow-purple-500/20 group relative overflow-hidden">
+                    <!-- Animated background particles -->
+                    <div class="absolute inset-0 opacity-20">
+                        <div class="absolute top-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-purple-300 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">AI Configures Everything</h3>
-                    <p class="text-white/80 leading-relaxed">AI automatically determines environment variables, scaling policies, security groups, and optimal AWS services for your application.</p>
-                </div>
-                
-                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-rocket"></i>
+                    
+                    <!-- Glowing border effect -->
+                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                    
+                    <!-- Icon with enhanced animation -->
+                    <div class="relative z-10">
+                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <i class="fas fa-database text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <!-- Neon logo indicator -->
+                        <div class="absolute -top-2 -right-2 w-12 h-12 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full blur-sm opacity-80 animate-pulse"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-300 via-blue-400 to-purple-500 rounded-full"></div>
+                            <div class="absolute inset-1 bg-gradient-to-br from-cyan-200 via-blue-300 to-purple-400 rounded-full"></div>
+                            <div class="relative z-10 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 rounded-full p-2 shadow-2xl shadow-cyan-400/50 border border-cyan-400/30">
+                                <img src="./neon-logo.png" alt="Neon" class="w-8 h-8 object-contain">
+                            </div>
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-60"></div>
+                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-purple-300 rounded-full animate-bounce opacity-60" style="animation-delay: 1s;"></div>
                     </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Deploy</h3>
-                    <p class="text-white/80 leading-relaxed">AI handles VPC, security groups, load balancers, SSL certificates, database provisioning, and monitoring setup automatically.</p>
-                </div>
-                
-                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">Perfect for Solo Founders</h3>
-                    <p class="text-white/80 leading-relaxed">Built for indie developers and small teams (2-10 people) who need infrastructure but lack DevOps expertise.</p>
-                </div>
-                
-                <div class="bg-white/5 backdrop-blur-lg border border-primary/20 rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-black/30 group relative overflow-hidden">
-                    <div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-                    <div class="w-20 h-20 mx-auto mb-5 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-dark text-3xl pulse-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3 class="text-xl md:text-2xl font-semibold mb-4 text-primary">AI Database Optimization</h3>
-                    <p class="text-white/80 leading-relaxed">AI automatically provisions PostgreSQL and MySQL databases with optimal configurations, backups, and monitoring setup.</p>
+                    
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">Serverless DB</h3>
+                    <p class="text-white/80 leading-relaxed text-lg">Powered by Neon. Auto-scaling PostgreSQL database with branching, instant cloning, and zero-downtime deployments.</p>
                 </div>
             </div>
         </div>
@@ -367,79 +427,79 @@ Obelis AI
             </h3>
             
             <div class="overflow-x-auto">
-                <table class="w-full bg-white/5 backdrop-blur-lg border border-primary/20 rounded-2xl overflow-hidden">
+                <table class="w-full bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl overflow-hidden">
                     <thead>
-                        <tr class="bg-primary/10">
+                        <tr class="bg-blue-500/10">
                             <th class="px-6 py-4 text-left text-white font-semibold">Monthly Traffic</th>
                             <th class="px-6 py-4 text-left text-white font-semibold">Estimated Bandwidth</th>
                             <th class="px-6 py-4 text-center text-white font-semibold">Vercel Cost</th>
                             <th class="px-6 py-4 text-center text-white font-semibold">Flightcontrol Cost</th>
-                            <th class="px-6 py-4 text-center text-primary font-semibold">Obelis AI + AWS Cost</th>
+                            <th class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">Obelis AI + AWS Cost</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-primary/20">
+                    <tbody class="divide-y divide-blue-500/20">
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">1K visitors</td>
                             <td class="px-6 py-4 text-white/80">5GB</td>
                             <td class="px-6 py-4 text-center text-white/80">FREE</td>
                             <td class="px-6 py-4 text-center text-white/80">$5</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">5K visitors</td>
                             <td class="px-6 py-4 text-white/80">25GB</td>
                             <td class="px-6 py-4 text-center text-white/80">FREE</td>
                             <td class="px-6 py-4 text-center text-white/80">$5</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">10K visitors</td>
                             <td class="px-6 py-4 text-white/80">50GB</td>
                             <td class="px-6 py-4 text-center text-white/80">FREE</td>
                             <td class="px-6 py-4 text-center text-white/80">$7</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">25K visitors</td>
                             <td class="px-6 py-4 text-white/80">125GB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$7</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">50K visitors</td>
                             <td class="px-6 py-4 text-white/80">250GB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$25</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">100K visitors</td>
                             <td class="px-6 py-4 text-white/80">500GB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$25</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">250K visitors</td>
                             <td class="px-6 py-4 text-white/80">1TB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$50</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">FREE</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">500K visitors</td>
                             <td class="px-6 py-4 text-white/80">1.5TB</td>
                             <td class="px-6 py-4 text-center text-white/80">$400</td>
                             <td class="px-6 py-4 text-center text-white/80">$100</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">$0.50/month + $42.50 overage</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">$0.50/month + $42.50 overage</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">1M visitors</td>
                             <td class="px-6 py-4 text-white/80">3TB</td>
                             <td class="px-6 py-4 text-center text-white/80">$400</td>
                             <td class="px-6 py-4 text-center text-white/80">$200</td>
-                            <td class="px-6 py-4 text-center text-primary font-semibold">$0.50/month + $170 overage</td>
+                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">$0.50/month + $170 overage</td>
                         </tr>
                     </tbody>
                 </table>
@@ -447,7 +507,7 @@ Obelis AI
             
             <div class="text-center mt-8">
                 <p class="text-white/70 text-lg mb-4">Deploy to your own AWS account and pay only for what you use</p>
-                <a href="#waitlist" class="inline-block px-8 py-3 bg-gradient-to-r from-primary to-secondary text-dark rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 shine-effect">
+                <a href="#waitlist" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
                     Start Saving Today
                 </a>
             </div>
@@ -461,8 +521,8 @@ Obelis AI
                 Frequently Asked Questions
             </h2>
             <div class="space-y-5">
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-lg">What is Obelis AI?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
@@ -471,8 +531,8 @@ Obelis AI
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-lg">How is this different from Flightcontrol?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
@@ -501,8 +561,8 @@ Obelis AI
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-lg">Do I need DevOps experience?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
@@ -511,8 +571,8 @@ Obelis AI
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-lg">How does the AI work?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
@@ -521,8 +581,8 @@ Obelis AI
                     </div>
                 </div>
                 
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div class="faq-question flex justify-between items-center p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-lg">Who is Obelis AI built for?</span>
                         <span class="faq-toggle text-2xl transition-transform duration-300">+</span>
                     </div>
@@ -535,7 +595,7 @@ Obelis AI
     </section>
 
     <!-- Waitlist Section -->
-    <section id="waitlist" class="py-20 md:py-32 bg-primary/5">
+    <section id="waitlist" class="py-20 md:py-32 bg-blue-500/5">
         <div class="max-w-4xl mx-auto px-5 text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-5 gradient-text">
                 Join the future of AI-powered DevOps
@@ -546,17 +606,17 @@ Obelis AI
             
             <div class="newsletter-form-container max-w-lg mx-auto">
                 <form class="newsletter-form" action="https://app.loops.so/api/newsletter-form/cmag4ikmt040rro6i5exx0hp5" method="POST" style="display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;">
-                    <input class="newsletter-form-input" name="newsletter-form-input" type="email" placeholder="you@example.com" required="" style="font-family: Inter, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 10px 0px 0px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
-                    <button type="submit" class="newsletter-form-button" style="background: rgb(133, 255, 227); font-size: 14px; color: rgb(0, 0, 0); font-family: Inter, sans-serif; display: flex; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Apply for Beta</button>
-                    <button type="button" class="newsletter-loading-button" style="background: rgb(133, 255, 227); font-size: 14px; color: rgb(0, 0, 0); font-family: Inter, sans-serif; display: none; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Please wait...</button>
+                    <input class="newsletter-form-input" name="newsletter-form-input" type="email" placeholder="you@example.com" required="" style="font-family: Manrope, sans-serif; color: rgb(0, 0, 0); font-size: 14px; margin: 0px 10px 0px 0px; width: 100%; max-width: 300px; min-width: 100px; background: rgb(255, 255, 255); border: 1px solid rgb(209, 213, 219); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; padding: 8px 12px;">
+                    <button type="submit" class="newsletter-form-button" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); font-size: 14px; color: rgb(255, 255, 255); font-family: Manrope, sans-serif; display: flex; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Apply for Beta</button>
+                    <button type="button" class="newsletter-loading-button" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); font-size: 14px; color: rgb(255, 255, 255); font-family: Manrope, sans-serif; display: none; width: min-content; max-width: 300px; white-space: nowrap; height: 38px; align-items: center; justify-content: center; flex-direction: row; padding: 9px 17px; box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px; border-radius: 6px; text-align: center; font-style: normal; font-weight: 500; line-height: 20px; border: none; cursor: pointer;">Please wait...</button>
                 </form>
                 <div class="newsletter-success" style="display: none; align-items: center; justify-content: center; width: 100%;">
-                    <p class="newsletter-success-message" style="font-family: Inter, sans-serif; color: rgb(255, 255, 255); font-size: 14px;">Thanks for joining!</p>
+                    <p class="newsletter-success-message" style="font-family: Manrope, sans-serif; color: rgb(255, 255, 255); font-size: 14px;">Thanks for joining!</p>
                 </div>
                 <div class="newsletter-error" style="display: none; align-items: center; justify-content: center; width: 100%;">
-                    <p class="newsletter-error-message" style="font-family: Inter, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">Oops! Something went wrong, please try again</p>
+                    <p class="newsletter-error-message" style="font-family: Manrope, sans-serif; color: rgb(185, 28, 28); font-size: 14px;">Oops! Something went wrong, please try again</p>
                 </div>
-                <button class='newsletter-back-button' type='button' style='color:#6b7280;font: 14px, Inter, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer' onmouseout='this.style.textDecoration="none"' onmouseover='this.style.textDecoration="underline"'>
+                <button class='newsletter-back-button' type='button' style='color:#6b7280;font: 14px, Manrope, sans-serif;margin:10px auto;text-align:center;display:none;background:transparent;border:none;cursor:pointer' onmouseout='this.style.textDecoration="none"' onmouseover='this.style.textDecoration="underline"'>
                     &larr; Back
                 </button>
             </div>
@@ -564,9 +624,9 @@ Obelis AI
     </section>
 
     <!-- Footer -->
-    <footer class="py-16 border-t border-primary/20 mt-20">
+    <footer class="py-16 border-t border-blue-500/20 mt-20">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <p class="text-white/50 text-sm">© 2025 Obelis AI. All rights reserved. | <a href="#features" class="text-primary/70 hover:text-primary underline">AI-Powered DevOps</a> | <a href="#waitlist" class="text-primary/70 hover:text-primary underline">Apply for Beta</a></p>
+            <p class="text-white/50 text-sm">© 2025 Obelis AI. All rights reserved. | <a href="#features" class="text-blue-500/70 hover:text-blue-500 underline">AI-Powered DevOps</a> | <a href="#waitlist" class="text-blue-500/70 hover:text-blue-500 underline">Apply for Beta</a></p>
         </div>
     </footer>
 
