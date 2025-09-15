@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obelis AI | AI-Powered DevOps - Deploy to AWS with Intelligence</title>
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://obelis.ai/">
     <meta property="og:title" content="Obelis AI | AI-Powered DevOps - Deploy to AWS with Intelligence">
-    <meta property="og:description" content="AI-powered deployment to your own AWS. Connect GitHub, add AWS credentials, let AI handle the rest. No DevOps knowledge required. From code to production in under 5 minutes.">
+    <meta property="og:description"
+        content="AI-powered deployment to your own AWS. Connect GitHub, add AWS credentials, let AI handle the rest. No DevOps knowledge required. From code to production in under 5 minutes.">
     <meta property="og:image" content="https://obelis.ai.s3.amazonaws.com/og-image.png">
     <meta property="og:image:alt" content="Obelis AI - Your Intelligent Cloud Engineer">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Obelis AI | AI-Powered DevOps - Deploy to AWS with Intelligence">
-    <meta name="twitter:description" content="AI-powered deployment to your own AWS. Connect GitHub, add AWS credentials, let AI handle the rest. No DevOps knowledge required. From code to production in under 5 minutes.">
+    <meta name="twitter:description"
+        content="AI-powered deployment to your own AWS. Connect GitHub, add AWS credentials, let AI handle the rest. No DevOps knowledge required. From code to production in under 5 minutes.">
     <meta name="twitter:image" content="https://obelis-landing.s3.amazonaws.com/og-image.png">
     <meta name="twitter:image:alt" content="Obelis AI - Your Intelligent Cloud Engineer">
-    
+
     <!-- Additional Meta Tags -->
-    <meta name="description" content="Deploy to your AWS with AI intelligence. No DevOps knowledge required. AI-powered deployment: Connect GitHub repo, add AWS credentials, let AI handle the rest. From code to production in under 5 minutes.">
-    <meta name="keywords" content="AI DevOps, AWS deployment, AI-powered deployment, GitHub, Cloud infrastructure, Startups, Solo developers, VPC, Auto-scaling, SSL certificates, PostgreSQL, MySQL, Node.js, Python, Go, React, Vue, Angular">
+    <meta name="description"
+        content="Deploy to your AWS with AI intelligence. No DevOps knowledge required. AI-powered deployment: Connect GitHub repo, add AWS credentials, let AI handle the rest. From code to production in under 5 minutes.">
+    <meta name="keywords"
+        content="AI DevOps, AWS deployment, AI-powered deployment, GitHub, Cloud infrastructure, Startups, Solo developers, VPC, Auto-scaling, SSL certificates, PostgreSQL, MySQL, Node.js, Python, Go, React, Vue, Angular">
     <meta name="author" content="Obelis AI">
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7CJYH4LPJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-R7CJYH4LPJ');
     </script>
@@ -65,7 +70,7 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
-        
+
         body {
             background-color: #0a0a0f;
         }
@@ -76,16 +81,21 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .glow-animation {
             animation: glow 3s ease-in-out infinite alternate;
         }
-        
+
         @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3)); }
-            to { filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.6)); }
+            from {
+                filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
+            }
+
+            to {
+                filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.6));
+            }
         }
-        
+
         .particle {
             position: absolute;
             width: 3px;
@@ -98,38 +108,48 @@
             will-change: transform;
             bottom: -10px;
         }
-        
+
         @keyframes float {
-            0% { 
-                transform: translateY(0) rotate(0deg); 
-                opacity: 0; 
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
             }
-            5% { 
-                opacity: 0.4; 
+
+            5% {
+                opacity: 0.4;
             }
-            95% { 
-                opacity: 0.4; 
+
+            95% {
+                opacity: 0.4;
             }
-            100% { 
-                transform: translateY(-100vh) rotate(360deg); 
-                opacity: 0; 
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
             }
         }
-        
+
         .pulse-icon {
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
-        
+
         .shine-effect {
             position: relative;
             overflow: hidden;
         }
-        
+
         .shine-effect::before {
             content: '';
             position: absolute;
@@ -137,30 +157,31 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-        
+
         .shine-effect:hover::before {
             left: 100%;
         }
-        
+
         /* Mobile-specific improvements */
         @media (max-width: 640px) {
             .particle {
-                display: none; /* Hide particles on mobile for better performance */
+                display: none;
+                /* Hide particles on mobile for better performance */
             }
-            
+
             /* Improve touch targets */
             .faq-question {
                 min-height: 60px;
             }
-            
+
             /* Better spacing for mobile */
             .feature-card {
                 margin-bottom: 1rem;
             }
-            
+
             /* Improve button touch targets */
             a[href="#waitlist"] {
                 min-height: 48px;
@@ -203,6 +224,7 @@
     }
     </script>
 </head>
+
 <body class="bg-gradient-to-br from-dark via-darker to-accent text-white font-sans overflow-x-hidden">
     <!-- Floating Particles -->
     <div id="particles" class="fixed inset-0 z-10 pointer-events-none overflow-hidden"></div>
@@ -213,27 +235,33 @@
             <nav class="flex justify-between items-center">
                 <div class="flex items-center gap-3 text-2xl font-bold">
                     <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg">
-                        <path style="fill:#ffffff" d="M 36.001782,5.1519269 31.123505,11.906071 28.121094,70.626332 H 44.256278 L 41.347746,11.624435 Z m -0.65715,3.0024104 0.187756,61.1593997 -6.003114,-0.09388 2.906826,-56.844393 z" />
+                        <path style="fill:#ffffff"
+                            d="M 36.001782,5.1519269 31.123505,11.906071 28.121094,70.626332 H 44.256278 L 41.347746,11.624435 Z m -0.65715,3.0024104 0.187756,61.1593997 -6.003114,-0.09388 2.906826,-56.844393 z" />
                     </svg>
-                Obelis AI
+                    Obelis AI
                 </div>
                 <!-- Mobile menu button -->
-                <button class="md:hidden text-white hover:text-primary transition-colors duration-300" id="mobile-menu-button">
+                <button class="md:hidden text-white hover:text-primary transition-colors duration-300"
+                    id="mobile-menu-button">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
                 <!-- Desktop navigation -->
                 <ul class="hidden md:flex items-center gap-8">
-                    <li><a href="#features" class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Features</a></li>
-                    <li><a href="#faq" class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">FAQ</a></li>
-                    <li><a href="https://peerlist.io/federicopochat/project/obelis-ai" target="_blank" class="group inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/50 relative overflow-hidden">
-                        <img src="./peerlist-logo.png" alt="Peerlist" class="h-6 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                    </a></li>
-                    <li><a href="https://discord.gg/VAeT5Q3hbc" target="_blank" class="group inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#5865F2]/50 relative overflow-hidden">
-                        <i class="fab fa-discord text-lg transition-transform duration-300 group-hover:scale-110"></i>
-                        <span class="relative z-10">Join Community</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                    </a></li>
+                    <li><a href="#features"
+                            class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Features</a>
+                    </li>
+                    <li><a href="#faq"
+                            class="text-white/80 hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">FAQ</a>
+                    </li>
+                    <li><a href="https://discord.gg/VAeT5Q3hbc" target="_blank"
+                            class="group inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#5865F2]/50 relative overflow-hidden">
+                            <i
+                                class="fab fa-discord text-lg transition-transform duration-300 group-hover:scale-110"></i>
+                            <span class="relative z-10">Join Community</span>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                            </div>
+                        </a></li>
                 </ul>
             </nav>
             <!-- Mobile navigation menu -->
@@ -241,27 +269,30 @@
                 <div class="flex flex-col h-full">
                     <!-- Close button -->
                     <div class="flex justify-end p-5">
-                        <button class="text-white hover:text-primary transition-colors duration-300" id="mobile-menu-close">
+                        <button class="text-white hover:text-primary transition-colors duration-300"
+                            id="mobile-menu-close">
                             <i class="fas fa-times text-2xl"></i>
                         </button>
                     </div>
-                    
+
                     <!-- Menu items -->
                     <div class="flex-1 flex items-center justify-center">
                         <ul class="text-center space-y-8">
-                            <li><a href="#features" class="block text-white/90 hover:text-primary transition-colors duration-300 text-xl font-medium">Features</a></li>
-                            <li><a href="#faq" class="block text-white/90 hover:text-primary transition-colors duration-300 text-xl font-medium">FAQ</a></li>
-                            <li class="mt-8">
-                                <a href="https://peerlist.io/federicopochat/project/obelis-ai" target="_blank" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/50 relative overflow-hidden">
-                                    <img src="./peerlist-logo.png" alt="Peerlist" class="h-8 object-contain transition-transform duration-300 group-hover:scale-110">
-                                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                                </a>
+                            <li><a href="#features"
+                                    class="block text-white/90 hover:text-primary transition-colors duration-300 text-xl font-medium">Features</a>
+                            </li>
+                            <li><a href="#faq"
+                                    class="block text-white/90 hover:text-primary transition-colors duration-300 text-xl font-medium">FAQ</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/VAeT5Q3hbc" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#5865F2]/50 relative overflow-hidden">
-                                    <i class="fab fa-discord text-lg transition-transform duration-300 group-hover:scale-110"></i>
+                                <a href="https://discord.gg/VAeT5Q3hbc" target="_blank"
+                                    class="inline-flex items-center gap-3 px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-lg font-medium transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#5865F2]/50 relative overflow-hidden">
+                                    <i
+                                        class="fab fa-discord text-lg transition-transform duration-300 group-hover:scale-110"></i>
                                     <span class="relative z-10">Join Community</span>
-                                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000">
+                                    </div>
                                 </a>
                             </li>
                         </ul>
@@ -275,33 +306,24 @@
     <section class="relative py-20 md:py-32">
         <div class="max-w-6xl mx-auto px-5">
             <div class="flex flex-col items-center justify-center text-center mx-auto">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] text-white/80 mb-4 font-light leading-[1.2] max-w-5xl">
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] text-white/80 mb-4 font-light leading-[1.2] max-w-5xl">
                     Manage your infrastructure with your <span class="text-primary">AI DevOps Engineer</span>
                 </h1>
                 <p class="text-base sm:text-lg md:text-xl text-white/70 mb-4 leading-relaxed max-w-xl">
-                    No DevOps knowledge required. Connect your GitHub repo, add AWS credentials, and let AI handle the rest.
+                    No DevOps knowledge required. Connect your GitHub repo, add AWS credentials, and let AI handle the
+                    rest.
                 </p>
-                <a href="https://beta.obelis.ai" class="inline-flex items-center gap-3 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
+                <a href="https://beta.obelis.ai"
+                    class="inline-flex items-center gap-3 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
                     <i class="fas fa-rocket text-sm"></i>
                     Try Beta
                 </a>
-                <div class="mcp-banner bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 border border-blue-500/30 rounded-2xl p-4 mb-6 mt-10 relative overflow-hidden group hover:border-blue-500/50 transition-all duration-300 w-full max-w-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-blue-500/5 animate-pulse"></div>
-                    <div class="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-center sm:text-left">
-                        <div class="flex items-center gap-2">
-                            <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
-                            <div class="w-1 h-1 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                        </div>
-                        <span class="text-sm sm:text-lg md:text-xl text-blue-500 font-semibold">✨ Now with MCP Server for AI-powered deployments</span>
-                        <div class="flex items-center gap-2">
-                            <div class="w-1 h-1 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
-                            <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
-                            <div class="w-3 h-3 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 2.5s;"></div>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </div>
+                <a href="https://peerlist.io/federicopochat/project/obelis-ai" target="_blank" rel="noreferrer"
+                    class="pt-6">
+                    <img src="https://peerlist.io/api/v1/projects/embed/PRJH9OBAJE8P6MMAMHAMQD6RGELGB9?showUpvote=false&theme=dark"
+                        alt="Obelis AI" style="width: auto; height: 56px;" />
+                </a>
             </div>
         </div>
     </section>
@@ -310,46 +332,47 @@
     <section class="py-20 bg-white/5 my-20">
         <div class="max-w-6xl mx-auto px-5">
             <div class="text-center mb-16">
-                            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 gradient-text">
-                See Obelis AI in Action
-            </h2>
-            <p class="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-                Watch how AI transforms your deployment process from complex DevOps to simple clicks
-            </p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 gradient-text">
+                    See Obelis AI in Action
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+                    Watch how AI transforms your deployment process from complex DevOps to simple clicks
+                </p>
             </div>
-            
+
             <div class="relative group">
                 <!-- Glowing border effect -->
                 <!-- <div class="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div> -->
-                
+
                 <!-- Video container -->
                 <div class="relative rounded-3xl p-4 sm:p-8 md:p-12 overflow-hidden">
-                    
+
                     <!-- Video wrapper with aspect ratio -->
                     <div class="relative z-10">
                         <div class="relative w-full" style="padding-bottom: 56.25%;">
-                            <iframe 
-                                class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-xl shadow-primary/20"
+                            <iframe class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-xl shadow-primary/20"
                                 src="https://www.youtube.com/embed/w3PhYc2oW8Q?rel=0&modestbranding=1&showinfo=0"
-                                title="Obelis AI - AI-Powered DevOps Demo"
-                                frameborder="0"
+                                title="Obelis AI - AI-Powered DevOps Demo" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen>
                             </iframe>
                         </div>
-                    
+
                     </div>
-                    
+
                     <!-- Floating elements -->
                     <div class="absolute top-4 right-4 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                    <div class="absolute bottom-4 left-4 w-2 h-2 bg-secondary rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                    <div class="absolute top-1/2 right-6 w-1 h-1 bg-primary rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                    <div class="absolute bottom-4 left-4 w-2 h-2 bg-secondary rounded-full animate-pulse"
+                        style="animation-delay: 1s;"></div>
+                    <div class="absolute top-1/2 right-6 w-1 h-1 bg-primary rounded-full animate-pulse"
+                        style="animation-delay: 2s;"></div>
                 </div>
-                
+
                 <!-- Call to action below video -->
                 <div class="text-center mt-8">
                     <p class="text-white/70 text-base sm:text-lg mb-4">Ready to experience AI-powered deployment?</p>
-                    <a href="https://beta.obelis.ai" class="inline-flex items-center gap-3 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
+                    <a href="https://beta.obelis.ai"
+                        class="inline-flex items-center gap-3 px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
                         <i class="fas fa-rocket text-sm"></i>
                         Try Beta
                     </a>
@@ -363,97 +386,146 @@
         <div class="max-w-6xl mx-auto px-5">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- AI Managed Project -->
-                <div class="feature-card bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 backdrop-blur-xl border border-blue-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/20 group relative overflow-hidden">
+                <div
+                    class="feature-card bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-blue-500/10 backdrop-blur-xl border border-blue-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-blue-500/60 hover:shadow-2xl hover:shadow-blue-500/20 group relative overflow-hidden">
                     <!-- Animated background particles -->
                     <div class="absolute inset-0 opacity-20">
                         <div class="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-blue-300 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-purple-400 rounded-full animate-pulse"
+                            style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-blue-300 rounded-full animate-pulse"
+                            style="animation-delay: 2s;"></div>
                     </div>
-                    
+
                     <!-- Glowing border effect -->
-                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-                    
+                    <div
+                        class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl">
+                    </div>
+
                     <!-- Icon with enhanced animation -->
                     <div class="relative z-10">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-                            <i class="fas fa-cloud text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                        <div
+                            class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <i
+                                class="fas fa-cloud text-3xl group-hover:scale-110 transition-transform duration-300"></i>
                         </div>
-                        
+
                         <!-- Floating elements around icon -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-60"></div>
-                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0.5s;"></div>
-                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-blue-300 rounded-full animate-bounce opacity-60" style="animation-delay: 1s;"></div>
+                        <div
+                            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-blue-400 rounded-full animate-bounce opacity-60">
+                        </div>
+                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce opacity-60"
+                            style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-blue-300 rounded-full animate-bounce opacity-60"
+                            style="animation-delay: 1s;"></div>
                     </div>
-                    
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300" style="line-height: 1.2; padding-bottom: 4px;">AI Managed Project</h3>
-                    <p class="text-white/80 leading-relaxed text-lg">Your AI DevOps engineer manages everything on AWS. From infrastructure to monitoring, security analysis, and vulnerability scanning, AI handles it all while you focus on building.</p>
+
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300"
+                        style="line-height: 1.2; padding-bottom: 4px;">AI Managed Project</h3>
+                    <p class="text-white/80 leading-relaxed text-lg">Your AI DevOps engineer manages everything on AWS.
+                        From infrastructure to monitoring, security analysis, and vulnerability scanning, AI handles it
+                        all while you focus on building.</p>
                 </div>
-                
+
                 <!-- GitHub to Production -->
-                <div class="feature-card bg-gradient-to-br from-green-500/10 via-blue-500/10 to-green-500/10 backdrop-blur-xl border border-green-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-green-500/60 hover:shadow-2xl hover:shadow-green-500/20 group relative overflow-hidden">
+                <div
+                    class="feature-card bg-gradient-to-br from-green-500/10 via-blue-500/10 to-green-500/10 backdrop-blur-xl border border-green-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-green-500/60 hover:shadow-2xl hover:shadow-green-500/20 group relative overflow-hidden">
                     <!-- Animated background particles -->
                     <div class="absolute inset-0 opacity-20">
                         <div class="absolute top-4 left-4 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-green-300 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-blue-400 rounded-full animate-pulse"
+                            style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-green-300 rounded-full animate-pulse"
+                            style="animation-delay: 2s;"></div>
                     </div>
-                    
+
                     <!-- Glowing border effect -->
-                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-500/20 via-blue-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-                    
+                    <div
+                        class="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-500/20 via-blue-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl">
+                    </div>
+
                     <!-- Icon with enhanced animation -->
                     <div class="relative z-10">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-green-500/30 group-hover:shadow-green-500/50 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
-                            <i class="fab fa-github text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                        <div
+                            class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-green-500/30 group-hover:shadow-green-500/50 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3">
+                            <i
+                                class="fab fa-github text-3xl group-hover:scale-110 transition-transform duration-300"></i>
                         </div>
-                        
+
                         <!-- Floating elements -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-green-400 rounded-full animate-bounce opacity-60"></div>
-                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0.5s;"></div>
-                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-green-300 rounded-full animate-bounce opacity-60" style="animation-delay: 1s;"></div>
+                        <div
+                            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-green-400 rounded-full animate-bounce opacity-60">
+                        </div>
+                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-bounce opacity-60"
+                            style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-green-300 rounded-full animate-bounce opacity-60"
+                            style="animation-delay: 1s;"></div>
                     </div>
-                    
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">GitHub to Production</h3>
-                    <p class="text-white/80 leading-relaxed text-lg">From your GitHub repo to production in seconds. AI automatically detects your stack and deploys with optimal configurations.</p>
+
+                    <h3
+                        class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                        GitHub to Production</h3>
+                    <p class="text-white/80 leading-relaxed text-lg">From your GitHub repo to production in seconds. AI
+                        automatically detects your stack and deploys with optimal configurations.</p>
                 </div>
-                
+
                 <!-- Serverless DB -->
-                <div class="feature-card bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-purple-500/60 hover:shadow-2xl hover:shadow-purple-500/20 group relative overflow-hidden">
+                <div
+                    class="feature-card bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-purple-500/10 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 text-center transition-all duration-500 hover:-translate-y-4 hover:scale-105 hover:border-purple-500/60 hover:shadow-2xl hover:shadow-purple-500/20 group relative overflow-hidden">
                     <!-- Animated background particles -->
                     <div class="absolute inset-0 opacity-20">
                         <div class="absolute top-4 left-4 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
-                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-purple-300 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                        <div class="absolute bottom-6 right-6 w-1 h-1 bg-pink-400 rounded-full animate-pulse"
+                            style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-2 w-1 h-1 bg-purple-300 rounded-full animate-pulse"
+                            style="animation-delay: 2s;"></div>
                     </div>
-                    
+
                     <!-- Glowing border effect -->
-                    <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-                    
+                    <div
+                        class="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl">
+                    </div>
+
                     <!-- Icon with enhanced animation -->
                     <div class="relative z-10">
-                        <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-                            <i class="fas fa-database text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                        <div
+                            class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-purple-500/30 group-hover:shadow-purple-500/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <i
+                                class="fas fa-database text-3xl group-hover:scale-110 transition-transform duration-300"></i>
                         </div>
-                        
+
                         <!-- Neon logo indicator -->
                         <div class="absolute -top-2 -right-2 w-12 h-12 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full blur-sm opacity-80 animate-pulse"></div>
-                            <div class="absolute inset-0 bg-gradient-to-br from-cyan-300 via-blue-400 to-purple-500 rounded-full"></div>
-                            <div class="absolute inset-1 bg-gradient-to-br from-cyan-200 via-blue-300 to-purple-400 rounded-full"></div>
-                            <div class="relative z-10 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 rounded-full p-2 shadow-2xl shadow-cyan-400/50 border border-cyan-400/30">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full blur-sm opacity-80 animate-pulse">
+                            </div>
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-cyan-300 via-blue-400 to-purple-500 rounded-full">
+                            </div>
+                            <div
+                                class="absolute inset-1 bg-gradient-to-br from-cyan-200 via-blue-300 to-purple-400 rounded-full">
+                            </div>
+                            <div
+                                class="relative z-10 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 rounded-full p-2 shadow-2xl shadow-cyan-400/50 border border-cyan-400/30">
                                 <img src="./neon-logo.png" alt="Neon" class="w-8 h-8 object-contain">
                             </div>
                         </div>
-                        
+
                         <!-- Floating elements -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-60"></div>
-                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0.5s;"></div>
-                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-purple-300 rounded-full animate-bounce opacity-60" style="animation-delay: 1s;"></div>
+                        <div
+                            class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-60">
+                        </div>
+                        <div class="absolute top-2 right-1/4 w-2 h-2 bg-pink-400 rounded-full animate-bounce opacity-60"
+                            style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-2 left-1/4 w-2 h-2 bg-purple-300 rounded-full animate-bounce opacity-60"
+                            style="animation-delay: 1s;"></div>
                     </div>
-                    
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">Serverless DB</h3>
-                    <p class="text-white/80 leading-relaxed text-lg">Powered by Neon. Auto-scaling PostgreSQL database with branching, instant cloning, and zero-downtime deployments.</p>
+
+                    <h3
+                        class="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                        Serverless DB</h3>
+                    <p class="text-white/80 leading-relaxed text-lg">Powered by Neon. Auto-scaling PostgreSQL database
+                        with branching, instant cloning, and zero-downtime deployments.</p>
                 </div>
             </div>
         </div>
@@ -465,14 +537,16 @@
             <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-5 gradient-text">
                 Cost Comparison
             </h2>
-            <p class="text-base sm:text-lg md:text-xl text-white/70 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
-                See how Obelis AI with AWS compares to other platforms. Deploy to your own AWS account and pay only for what you use.
+            <p
+                class="text-base sm:text-lg md:text-xl text-white/70 text-center mb-16 max-w-3xl mx-auto leading-relaxed">
+                See how Obelis AI with AWS compares to other platforms. Deploy to your own AWS account and pay only for
+                what you use.
             </p>
-            
+
             <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-center mb-8 text-primary">
                 Static Website Hosting Cost Comparison
             </h3>
-            
+
             <!-- Desktop table (hidden on mobile) -->
             <div class="hidden md:block overflow-x-auto">
                 <table class="w-full bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl overflow-hidden">
@@ -482,7 +556,9 @@
                             <th class="px-6 py-4 text-left text-white font-semibold">Estimated Bandwidth</th>
                             <th class="px-6 py-4 text-center text-white font-semibold">Vercel Cost</th>
                             <th class="px-6 py-4 text-center text-white font-semibold">Flightcontrol Cost</th>
-                            <th class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">Obelis AI + AWS Cost</th>
+                            <th
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                Obelis AI + AWS Cost</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-blue-500/20">
@@ -491,68 +567,86 @@
                             <td class="px-6 py-4 text-white/80">5GB</td>
                             <td class="px-6 py-4 text-center text-white/80">FREE</td>
                             <td class="px-6 py-4 text-center text-white/80">$5</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">5K visitors</td>
                             <td class="px-6 py-4 text-white/80">25GB</td>
                             <td class="px-6 py-4 text-center text-white/80">FREE</td>
                             <td class="px-6 py-4 text-center text-white/80">$5</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">10K visitors</td>
                             <td class="px-6 py-4 text-white/80">50GB</td>
                             <td class="px-6 py-4 text-center text-white/80">FREE</td>
                             <td class="px-6 py-4 text-center text-white/80">$7</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">25K visitors</td>
                             <td class="px-6 py-4 text-white/80">125GB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$7</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">50K visitors</td>
                             <td class="px-6 py-4 text-white/80">250GB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$25</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">100K visitors</td>
                             <td class="px-6 py-4 text-white/80">500GB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$25</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">250K visitors</td>
                             <td class="px-6 py-4 text-white/80">1TB</td>
                             <td class="px-6 py-4 text-center text-white/80">$20</td>
                             <td class="px-6 py-4 text-center text-white/80">$50</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">FREE</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                FREE</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">500K visitors</td>
                             <td class="px-6 py-4 text-white/80">1.5TB</td>
                             <td class="px-6 py-4 text-center text-white/80">$400</td>
                             <td class="px-6 py-4 text-center text-white/80">$100</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">$0.50/month + $42.50 overage</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                $0.50/month + $42.50 overage</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors duration-300">
                             <td class="px-6 py-4 text-white font-medium">1M visitors</td>
                             <td class="px-6 py-4 text-white/80">3TB</td>
                             <td class="px-6 py-4 text-center text-white/80">$400</td>
                             <td class="px-6 py-4 text-center text-white/80">$200</td>
-                            <td class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">$0.50/month + $170 overage</td>
+                            <td
+                                class="px-6 py-4 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold text-lg">
+                                $0.50/month + $170 overage</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
+
             <!-- Mobile cards (hidden on desktop) -->
             <div class="md:hidden space-y-4">
                 <div class="bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-4">
@@ -571,11 +665,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-white/80">Obelis AI + AWS:</span>
-                            <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold">FREE</span>
+                            <span
+                                class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold">FREE</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-4">
                     <div class="text-center mb-4">
                         <h4 class="text-lg font-semibold text-white mb-2">250K - 500K visitors</h4>
@@ -592,11 +687,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-white/80">Obelis AI + AWS:</span>
-                            <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold">FREE</span>
+                            <span
+                                class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold">FREE</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-white/5 backdrop-blur-lg border border-blue-500/20 rounded-2xl p-4">
                     <div class="text-center mb-4">
                         <h4 class="text-lg font-semibold text-white mb-2">1M+ visitors</h4>
@@ -613,15 +709,19 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-white/80">Obelis AI + AWS:</span>
-                            <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold">$0.50 + overage</span>
+                            <span
+                                class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent font-bold">$0.50
+                                + overage</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-8">
-                <p class="text-white/70 text-base sm:text-lg mb-4">Deploy to your own AWS account and pay only for what you use</p>
-                <a href="#waitlist" class="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
+                <p class="text-white/70 text-base sm:text-lg mb-4">Deploy to your own AWS account and pay only for what
+                    you use</p>
+                <a href="#waitlist"
+                    class="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-base sm:text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
                     Start Saving Today
                 </a>
             </div>
@@ -635,83 +735,133 @@
                 Frequently Asked Questions
             </h2>
             <div class="space-y-5">
-                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">What is Obelis AI?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Obelis AI is an AI-powered DevOps platform that lets you deploy to your own AWS account without any DevOps knowledge. Connect your GitHub repo, add AWS credentials, and let AI handle the rest. Deploy in under 5 minutes.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Obelis AI is an
+                            AI-powered DevOps platform that lets you deploy to your own AWS account without any DevOps
+                            knowledge. Connect your GitHub repo, add AWS credentials, and let AI handle the rest. Deploy
+                            in under 5 minutes.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
-                        <span class="font-semibold text-base sm:text-lg pr-4">How is this different from Flightcontrol?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
+                        <span class="font-semibold text-base sm:text-lg pr-4">How is this different from
+                            Flightcontrol?</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">While Flightcontrol provides a great platform for AWS deployment, Obelis AI adds intelligent automation. Our AI analyzes your codebase to automatically determine optimal configurations, environment variables, scaling policies, and security settings without manual configuration.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">While
+                            Flightcontrol provides a great platform for AWS deployment, Obelis AI adds intelligent
+                            automation. Our AI analyzes your codebase to automatically determine optimal configurations,
+                            environment variables, scaling policies, and security settings without manual configuration.
+                        </p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">What happens to my AWS costs?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">You pay AWS directly for your infrastructure usage. Since everything deploys to your AWS account, you get full cost transparency and no vendor markup. This gives you AWS-level control at a fraction of the cost of managed platforms.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">You pay AWS
+                            directly for your infrastructure usage. Since everything deploys to your AWS account, you
+                            get full cost transparency and no vendor markup. This gives you AWS-level control at a
+                            fraction of the cost of managed platforms.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-primary/20 overflow-hidden transition-all duration-300 hover:border-primary/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-primary/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">What applications are supported?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">We currently support static websites (React, Vue, Angular), Node.js, Python, and Go applications. AI automatically detects your tech stack and configures the optimal deployment strategy.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">We currently
+                            support static websites (React, Vue, Angular), Node.js, Python, and Go applications. AI
+                            automatically detects your tech stack and configures the optimal deployment strategy.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">Do I need DevOps experience?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Not at all. Obelis AI handles all the complex DevOps heavy lifting—deployment orchestration, infrastructure provisioning, monitoring setup, and optimization. You focus on building great products, AI handles the infrastructure.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Not at all.
+                            Obelis AI handles all the complex DevOps heavy lifting—deployment orchestration,
+                            infrastructure provisioning, monitoring setup, and optimization. You focus on building great
+                            products, AI handles the infrastructure.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">How does the AI work?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Our AI analyzes your codebase to understand your application architecture, dependencies, and requirements. It then automatically generates optimal AWS configurations, environment variables, scaling policies, and security settings tailored to your specific application.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Our AI analyzes
+                            your codebase to understand your application architecture, dependencies, and requirements.
+                            It then automatically generates optimal AWS configurations, environment variables, scaling
+                            policies, and security settings tailored to your specific application.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">How secure are my AWS credentials?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Your AWS credentials are always encrypted and stored securely. They're only accessible by your account and never shared with other users. You maintain full control - credentials can be deleted from Obelis at any time or deactivated directly from your AWS console for immediate revocation.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Your AWS
+                            credentials are always encrypted and stored securely. They're only accessible by your
+                            account and never shared with other users. You maintain full control - credentials can be
+                            deleted from Obelis at any time or deactivated directly from your AWS console for immediate
+                            revocation.</p>
                     </div>
                 </div>
-                
-                <div class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
-                    <div class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
+
+                <div
+                    class="faq-item bg-white/5 rounded-2xl border border-blue-500/20 overflow-hidden transition-all duration-300 hover:border-blue-500/50">
+                    <div
+                        class="faq-question flex justify-between items-center p-4 sm:p-6 cursor-pointer hover:bg-blue-500/10 transition-colors duration-300">
                         <span class="font-semibold text-base sm:text-lg pr-4">Who is Obelis AI built for?</span>
-                        <span class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
+                        <span
+                            class="faq-toggle text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0">+</span>
                     </div>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 px-4 sm:px-6">
-                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Obelis AI is perfect for solo founders, indie developers, and small teams (2-10 people) who need to deploy applications but don't want to spend weeks learning DevOps. If you can build the app but deploying feels impossible, Obelis AI is for you.</p>
+                        <p class="text-white/80 pb-4 sm:pb-6 leading-relaxed text-sm sm:text-base py-2">Obelis AI is
+                            perfect for solo founders, indie developers, and small teams (2-10 people) who need to
+                            deploy applications but don't want to spend weeks learning DevOps. If you can build the app
+                            but deploying feels impossible, Obelis AI is for you.</p>
                     </div>
                 </div>
             </div>
@@ -727,9 +877,10 @@
             <p class="text-base sm:text-lg md:text-xl text-white/70 mb-10 max-w-3xl mx-auto leading-relaxed">
                 Get early beta access and exclusive updates on our AI-powered launch.
             </p>
-            
+
             <div class="max-w-lg mx-auto">
-                <a href="https://beta.obelis.ai" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
+                <a href="https://beta.obelis.ai"
+                    class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/30 shine-effect">
                     <i class="fas fa-rocket text-sm"></i>
                     Try Beta
                 </a>
@@ -740,7 +891,10 @@
     <!-- Footer -->
     <footer class="py-16 border-t border-blue-500/20 mt-20">
         <div class="max-w-6xl mx-auto px-5 text-center">
-            <p class="text-white/50 text-sm">© 2025 Obelis AI. All rights reserved. | <a href="#features" class="text-blue-500/70 hover:text-blue-500 underline">AI-Powered DevOps</a> | <a href="https://beta.obelis.ai" class="text-blue-500/70 hover:text-blue-500 underline">Try Beta</a></p>
+            <p class="text-white/50 text-sm">© 2025 Obelis AI. All rights reserved. | <a href="#features"
+                    class="text-blue-500/70 hover:text-blue-500 underline">AI-Powered DevOps</a> | <a
+                    href="https://beta.obelis.ai" class="text-blue-500/70 hover:text-blue-500 underline">Try Beta</a>
+            </p>
         </div>
     </footer>
 
@@ -749,10 +903,10 @@
         function createParticles() {
             const particles = document.getElementById('particles');
             if (!particles) return;
-            
+
             particles.innerHTML = '';
             const particleCount = 50;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
@@ -770,17 +924,17 @@
         // FAQ accordion
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.faq-question').forEach(question => {
-                question.addEventListener('click', function() {
+                question.addEventListener('click', function () {
                     const faqItem = this.parentElement;
                     const wasActive = faqItem.classList.contains('active');
-                    
+
                     // Close all FAQ items
                     document.querySelectorAll('.faq-item').forEach(item => {
                         item.classList.remove('active');
                         const answer = item.querySelector('.faq-answer');
                         answer.style.maxHeight = '0';
                     });
-                    
+
                     // Open clicked item if it wasn't active
                     if (!wasActive) {
                         faqItem.classList.add('active');
@@ -826,7 +980,7 @@
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileMenuClose = document.getElementById('mobile-menu-close');
-            
+
             function openMobileMenu() {
                 mobileMenu.classList.remove('hidden');
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
@@ -834,7 +988,7 @@
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
             }
-            
+
             function closeMobileMenu() {
                 mobileMenu.classList.add('hidden');
                 document.body.style.overflow = ''; // Restore scrolling
@@ -842,7 +996,7 @@
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
-            
+
             mobileMenuButton.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('hidden')) {
                     openMobileMenu();
@@ -858,7 +1012,7 @@
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', closeMobileMenu);
             });
-            
+
             // Close mobile menu when clicking outside
             mobileMenu.addEventListener('click', (e) => {
                 if (e.target === mobileMenu) {
@@ -868,4 +1022,5 @@
         });
     </script>
 </body>
+
 </html>
