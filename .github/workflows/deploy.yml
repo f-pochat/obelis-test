@@ -24,7 +24,7 @@ jobs:
         
     - name: Sync files to S3
       run: |
-        aws s3 sync . s3://landing-obelis \
+        aws s3 sync . s3://obelis-landing-prod \
           --exclude ".git/*" \
           --exclude ".github/*" \
           --exclude "README.md" \
@@ -34,5 +34,5 @@ jobs:
     - name: Invalidate CloudFront distribution
       run: |
         aws cloudfront create-invalidation \
-          --distribution-id E1LVU749NQHZ0Z \
+          --distribution-id E1XBXUN2HGGVE2 \
           --paths "/*"
